@@ -1,0 +1,74 @@
+git command
+------------------
+git status:- give the current status of git software
+git init:- this command initilize the git to that particular foler and it run only one time per project
+
+Flow:-
+Working Directory-> Git add -> Statging area -> git commit -> repo -> git push -> github
+
+git add filename/.(all):- this command is used to add that file that we want to track 
+once git add command run file move to staging area
+git commit -m "comment":- this command is used to commit that added file to using the git add
+
+git config:- this command is used to configure the git
+git config --global user.name "name":- this command set the name 
+git config --global user.email "xxx@google.com":- this command is used to set the email to the git
+without setting name and emailwe cannot commit the file to the git
+
+git config --global core.editor "code --wait": this command is used to set the default editor open by git when user want to do some changes
+like
+when we run git commit without -m then it open default own terminal to add a commit which may bit confusion to add a comment so by run the above command
+it open it in editor which in easily understandable
+
+-------------
+create a special file i.e. .gitignore
+This file is used full when we doeesnot want to track some special file/folder with contain some secure information that cannot be public
+for this open .gitignore file and put that file name or folder path
+
+------------------------------------
+git branch:- this command is used to visulize that currently in which branch we are working
+git branch branchName:- this command is used to create a new branch
+git checkout branchName:- this command is used to move to specified branchname
+git switch -c branchname:- this command is used to create a new branch and move to that branch
+git checkout -b branchname:- this command is used to create a new branch and move to that branch
+git branch -d branchname:- this command is used to delete that specified branch
+
+git merge branchName:- this command is used to mearge the one 
+git diff --staged:- this coomand is used to find the difference bewteen to same filei.e. current one with previos one(index.html and index.html )
+git diff hashcode Anotherhashcode:-  hashcode is generated when we commit into the git:- show diff between two commit
+git diff branchone..branchtwo:- show diff between two branches
+
+git stash:- this command is used to store edit file which is not commited to some tempory storage from which it can be reterive later
+got stash pop:- get changes data return to that file
+git stash list:- get the list stash file
+git stash apply stashname(stash(0 or 1 or 2))
+
+git checkout <hash>
+git switch main
+git checkout HEAD~2 (move at 2 comment priorir)
+git restore filename:- restore the file to the last version
+git reflog
+
+------------------------------
+git rebase
+
+
+--------------Git hub---------------------
+git remote -v:- is tell wheather any remote connection is establish or not:- if it return black then no remote connection is made
+git remote add name
+git remote rename oldname newname
+git remote remove name
+
+git push <remote> <branch>
+git push origin main
+git push <remote> localbranch : remotebarnch
+git push -u origin main:- this command is used to set a linking/upstream between local branch and github branch. if we once configure this 
+then we have to run only git push it automatically push that code into mapped branch not in other branch
+
+git clone <url>:- this command is used to clone and git repo to local system <url>:- Repo Url
+git fetch/pull: this command is used to get the remote data or changes files into the local machine
+in case of git fetch it only show the infomation what changes are avaliable in remote repo but doesnot mearge into the localrepo
+but in case of git pull= git fetch + merge
+git pull origin <branchname>
+
+
